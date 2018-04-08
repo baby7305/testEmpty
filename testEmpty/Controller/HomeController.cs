@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 
 namespace testEmpty.Controllers
 {
@@ -7,6 +8,8 @@ namespace testEmpty.Controllers
         // GET
         public IActionResult Index()
         {
+            int hour = DateTime.Now.Hour;
+            ViewData["Greeting"] = hour < 12 ? "Good Moring" : "Good Afternoon";
             return View();
         }
     }
