@@ -1,0 +1,22 @@
+﻿@model testEmpty.Model.GuestResponse
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Thanks</title>
+</head>
+<body>
+<div>
+    <h1>Thank you, @Model.Name</h1>
+    @if (Model.WillAttend == true)
+    {
+        @:It's great to that you are coming. The drinks are already in the fridge! 
+    }
+    else
+    {
+        @:Sorry to hear that you can't make it,but thanks for letting us know.
+    }
+</div>
+</body>
+</html>
