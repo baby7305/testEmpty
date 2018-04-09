@@ -12,5 +12,10 @@ namespace testEmpty.Controllers
             ViewData["Greeting"] = hour < 12 ? "Good Moring" : "Good Afternoon";
             return View();
         }
+
+        public IActionResult RsvpForm()
+        {
+            return View();
+        }
     }
 }
